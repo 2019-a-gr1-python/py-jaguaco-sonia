@@ -1,0 +1,1 @@
+def abrir_archivo_lectura()

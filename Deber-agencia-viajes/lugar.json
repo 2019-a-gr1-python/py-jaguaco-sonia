@@ -1,0 +1,32 @@
+    
+{
+    "lugar": [
+        {
+            "ciudad": "Tonsupa",
+            "direccion": "Costa",
+            "dias": "3",
+            "numeropersonas": 3,
+            "transporte": si,
+            "precio": "400",
+            "telefono": "0987890751"
+        },
+        {
+           "ciudad": "Manabi",
+            "direccion": "Costa",
+            "dias": "3",
+            "numeropersonas": 3,
+            "transporte": si,
+            "precio": "400",
+            "telefono": "0987890751"
+        },
+        {
+            "ciudad": "Laguna Azul",
+            "direccion": "Sierra",
+            "dias": "3",
+            "numeropersonas": 3,
+            "transporte": si,
+            "precio": "400",
+            "telefono": "0987890751"
+        }
+    ]
+}
