@@ -25,11 +25,9 @@ def ingresar_destinoturistico():
 	nombre = input('\nNombre Sitio a Visitar: ')
 	lugar = input('\nUbicacion Geografica: ')
 	
-	precio = input('\nPrecio: $')
+	precio = input('\nMonto: $')
 	
 	os.system ("cls")
-	
-	
 	return AgendarViaje(nombre, lugar, precio)
 
 
@@ -91,7 +89,7 @@ def actualizar_destinoturistico():
 				print('\nEscoja el dato que desee actualizar:')
 				print('\n1. Nombre Sitio a Visitar')
 				print('\n2. lugarbicacion Geografica')
-				print('\n3. Precio')
+				print('\n3. Monto')
 				print('\n\n4. Cancelar')
 
 				dato_a_actualizar = int(input('\nIngrese el numero de la opcion escogida: '))
@@ -105,7 +103,7 @@ def actualizar_destinoturistico():
 					destinoturistico.set_lugar(lugar)
 					file.write(destinoturistico.__str__('w'))
 				elif dato_a_actualizar is 3:
-					precio = input('\nIngrese nuevo precio: ')
+					precio = input('\nIngrese nuevo Monto: ')
 					destinoturistico.set_precio(precio)
 					file.write(destinoturistico.__str__('w'))
 				elif dato_a_actualizar is 4:
@@ -121,26 +119,17 @@ def recorrer_archivo(lineas_archivo, nombre):
 			linea_leida = linea.split(";")
 			return AgendarViaje(linea_leida[0], linea_leida[1],linea_leida[2])
 
-def recorrer_archivo2(self,lineas_archivo=None):
-	for linea in lineas_archivo:
-	    
-			
 
 def buscar_destinoturistico():
 	
 	while(True):
 		os.system ("cls")
 		print('\n********** Buscar Viajes Agendados ***********')
-		print('\nIngrese el nombre del sitios a buscar')
+		print('\nIngrese el nombre del sitio a buscar')
 		nombre = input('\nNombre del destino agendado: ')
 		os.system ("cls")
 		archivo_abierto = open(path1)
-	
-	
-	
-	
 		print(recorrer_archivo(archivo_abierto.readlines(), nombre).__str__('p'))
-		print(recorrer_archivo2(self,archivo_abierto.readlines()))
 		respuesta = input ('\n\n¿Desea realizar otra búsqueda? (S/N): ')
 		
 		archivo_abierto.close()
@@ -161,15 +150,14 @@ def menu_buscar():
 		print('\n********** Buscar ***********')
 		print('\nMenu de opciones de busqueda: ')
 		print('\n1. Buscar destinoturistico por nombre')
-	
-		print('\n2. Salir')
-
+		print('\n3. Salir')
 		opcion_busqueda = int(input('\nIngrese el numero de la opcion escogida: '))
 
 
 		if opcion_busqueda is 1:
 			buscar_destinoturistico()
-		elif opcion_busqueda is 2:
+					
+		elif opcion_busqueda is 3:
 			break
 		else:
 			os.system ("cls")
@@ -209,7 +197,7 @@ def eliminar_elemento():
 		print('\nElementos que se pueden eliminar')
 		print('\n1. lugar')
 		print('\n2. destinoturistico')
-		print('\n\n3. Salir')
+		print('\n3. Salir')
 
 		numero_opcion = int(input('\nEscriba el numero de la opcion escogida: '))
 		

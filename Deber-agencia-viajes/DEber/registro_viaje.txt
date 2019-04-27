@@ -1,2 +1,8 @@
 gg;yu;77
 ed;mar;45
+1;re;44
+11;re;44
+Loja;Sierra;300
+Salinas;Sierra;3000
+Salinas;Costa;300
+esmaeralda;costa;400

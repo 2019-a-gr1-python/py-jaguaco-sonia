@@ -22,7 +22,7 @@ class AgendarViaje:
 			return cadena
 
 		else:
-			cadena = f'Nombre: {self.nombre}\nlugar: {self.lugar}\nPrecio: ${self.precio}\n'
+			cadena = f'Nombre: {self.nombre}\nlugar: {self.lugar}\nMonto: ${self.precio}\n'
 			return cadena
 
 	def set_nombre(self, nombre):

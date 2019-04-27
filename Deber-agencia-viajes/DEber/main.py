@@ -1,6 +1,5 @@
 
 import cruds
-
 import os
 from AgendarViaje import AgendarViaje
 from lugar import lugar

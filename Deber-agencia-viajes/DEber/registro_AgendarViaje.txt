@@ -1,11 +1,3 @@
-Ace Attorney;VN;30.00
-Digimon Last Order;Aventura;50.00
-Yu-Gi-Oh;cartas;30.00
-CoD;shooter;30.00
-Pokemon;JRPG;90.00
-PLvPW;Aventura;60.00
-Prince of Persia;Aventura;68.00
-Super Mario 3DS;Plataforma;80.00
 sonala;sonata;33
 ww;dd;44
 de;dd;44

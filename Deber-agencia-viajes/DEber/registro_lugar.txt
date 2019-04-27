@@ -1,9 +1,9 @@
-Aventura;Basado en exploracion e investigacion para resolucion de puzzles en un ambiente hostil
-RPG;Role PLay Game, el jugador sigue la historia encarnado en el protagonista mientras se adentra un mundo con combates por turnos
-Plataforma;Basado en los reflejos del jugador y habilidad para maniobrar al personaje a traves de un mundo repleto de plataformas
-luis;luis
 sonia;sonia
 an;an
 www;wwww
 ss;ss
 dd;dd
+ds;ds
+salinas;costa
+Quito;sierra
+tame;costa
