@@ -24,12 +24,12 @@ def ingresar_destinoturistico():
 
 	nombre = input('\nNombre Sitio a Visitar: ')
 	lugar = input('\nUbicacion Geografica: ')
-	#censura = input('\nCensura: ')
-	precio = input('\nPrecio(ejemplo: $5.00): $')
-	#plataforma = input('\nPlataforma: ')
+	
+	precio = input('\nPrecio: $')
+	
 	os.system ("cls")
 	
-	#return destinoturistico = destinoturistico(nombre, lugar, censura, precio, plataforma)
+	
 	return AgendarViaje(nombre, lugar, precio)
 
 
@@ -120,10 +120,14 @@ def recorrer_archivo(lineas_archivo, nombre):
 		if linea_leida[0] == nombre:
 			linea_leida = linea.split(";")
 			return AgendarViaje(linea_leida[0], linea_leida[1],linea_leida[2])
+
+def recorrer_archivo2(self,lineas_archivo=None):
+	for linea in lineas_archivo:
+	    
 			
 
 def buscar_destinoturistico():
-	#flag = True
+	
 	while(True):
 		os.system ("cls")
 		print('\n********** Buscar Viajes Agendados ***********')
@@ -131,16 +135,17 @@ def buscar_destinoturistico():
 		nombre = input('\nNombre del destino agendado: ')
 		os.system ("cls")
 		archivo_abierto = open(path1)
-		#lineas_archivo = archivo_abierto.readlines()
+	
 	
 	
 	
 		print(recorrer_archivo(archivo_abierto.readlines(), nombre).__str__('p'))
-		respuesta = input ('\n\n¿Desea realizar otra búsqueda? (Y/N): ')
+		print(recorrer_archivo2(self,archivo_abierto.readlines()))
+		respuesta = input ('\n\n¿Desea realizar otra búsqueda? (S/N): ')
 		
 		archivo_abierto.close()
 
-		if respuesta is 'Y':
+		if respuesta is 'S':
 			continue
 		elif respuesta is 'N':
 			os.system ("cls")
@@ -156,16 +161,15 @@ def menu_buscar():
 		print('\n********** Buscar ***********')
 		print('\nMenu de opciones de busqueda: ')
 		print('\n1. Buscar destinoturistico por nombre')
-		print('\n2. Buscar lugar por nombre')
-		print('\n3. Buscar destinoturistico por lugar')
-		print('\n4. Salir')
+	
+		print('\n2. Salir')
 
 		opcion_busqueda = int(input('\nIngrese el numero de la opcion escogida: '))
 
 
 		if opcion_busqueda is 1:
 			buscar_destinoturistico()
-		elif opcion_busqueda is 4:
+		elif opcion_busqueda is 2:
 			break
 		else:
 			os.system ("cls")

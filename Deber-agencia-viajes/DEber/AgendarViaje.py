@@ -10,14 +10,14 @@ class AgendarViaje:
 		):
 		self.nombre = nombre
 		self.lugar = lugar
-		#self.censura = censura
+		
 		self.precio = precio
-		#self.plataforma = plataforma
+	
 
 	def __str__(self, modo):
 		cadena = ''
 		if modo is 'w':	
-			#return f'{self.nombre};{self.lugar};{self.censura};{self.precio};{self.plataforma}'
+			
 			cadena = f'{self.nombre};{self.lugar};{self.precio}'
 			return cadena
 
