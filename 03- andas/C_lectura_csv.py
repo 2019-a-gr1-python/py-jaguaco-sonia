@@ -20,3 +20,7 @@ df = pd.read_csv(
         usecols=['id','artist'],
         index_col='id'
         )
+
+
+
+path_guardado = 'C:/Users/DELL/Documents/GitHub/py-jaguaco-sonia/03- andas/data/csv/artwork_data.pickle'
