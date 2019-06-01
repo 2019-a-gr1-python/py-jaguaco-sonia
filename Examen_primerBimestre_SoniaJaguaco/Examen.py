@@ -135,6 +135,9 @@ pos = [0, 4, 8, 14, 20]
 #20) ¿Como anadir series vertical u horizontalmente a un DataFrame?
 ser1 = pd.Series(range(5))
 ser2 = pd.Series(list('abcde'))
+ser1 = pd.Series(range(5))
+
+ser2 = pd.Series(list('abcde'))
 #21)¿Obtener la media de una serie agrupada por otra serie?
 #groupby tambien esta disponible en series.
 
@@ -142,6 +145,10 @@ frutas = pd.Series(np.random.choice(['manzana', 'banana', 'zanahoria'], 10))
 pesos = pd.Series(np.linspace(1, 10, 10))
 print(pesos.tolist())
 print(frutas.tolist())
+
+
+
+
 #> [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
 #> ['banana', 'carrot', 'apple', 'carrot', 'carrot', 'apple', 'banana', 'carrot', 'apple', 'carrot']
 
@@ -151,6 +158,14 @@ print(frutas.tolist())
 # carrot    5.8
 # dtype: float64
 
+
+frutas = pd.Series(np.random.choice(['manzana', 'banana', 'zanahoria'], 10))
+
+pesos = pd.Series(np.linspace(1, 10, 10))
+
+print(pesos.tolist())
+
+print(frutas.tolist())
 #22)¿Como importar solo columnas especificas de un archivo csv?
 #https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv.
 
