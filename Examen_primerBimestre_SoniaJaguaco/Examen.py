@@ -172,6 +172,9 @@ print(frutas.tolist())
 
 
 
+url = 'https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv'
+df = pd.read_csv(url,usecols=["crim","zn","indus","chas"])
+df.head()
 
 
 
