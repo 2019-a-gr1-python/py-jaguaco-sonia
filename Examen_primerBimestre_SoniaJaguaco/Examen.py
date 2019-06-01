@@ -124,6 +124,10 @@ print(ser)
 #18) ¿Como transformar una serie de un arreglo de numpy a un DataFrame con un shape definido?
 ser = pd.Series(np.random.randint(1, 10, 35))
 shape(7,5)
+ser = pd.Series(list('abcdefghijklmnopqrstuvwxyz'))
+
+pos = [0, 4, 8, 14, 20]
+print(ser)
 #19) ¿Obtener los valores de una serie conociendo la posicion por indice?
 ser = pd.Series(list('abcdefghijklmnopqrstuvwxyz'))
 pos = [0, 4, 8, 14, 20]
