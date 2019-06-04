@@ -12,21 +12,22 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
+from seaborn import lmplot
+from seaborn import kdeplot
+from seaborn import distplot
 
 
-filename='C:/Users/DELL/Documents/R/ec.json'
+
+
+filename='C:/Users/DELL/Documents/R/ter1/ec.json'
 with open(filename) as f:
-    data = json.load(f)
+    data =pd.read_json(f)
     
 
 pprint(data)
-wordcloud = WordCloud().generate(data)
-# Generate plot
-plt.imshow(wordcloud)
-plt.axis("off")
-plt.show()
-datos_poblacion=pd.DataFrame(data)
 
+datos_poblacion=pd.DataFrame(data)
+datos_poblacion.head()
 pprint(datos_poblacion)
 spliteador_edad = lambda x: x.split('.')[1].split()[0]
 spliteador_genero=lambda x: x.split('.')[2].strip()
@@ -45,7 +46,7 @@ plt.xlabel('population_proper',size=16)
 plt.ylabel('Poblacion',size=16)
 plt.grid()
 plt.legend(['admin','city'])
-plt.title('Distribucion poblacion por edad y sexo')
+plt.title('Distribucion de population  proper y la oblacion total')
 plt.savefig('distripoblacionedadsexo.png',dpi=600)
 
 df3=pd.DataFrame(data,columns=['population_proper','population'])
@@ -53,21 +54,33 @@ df3.hist
 df3['population_proper']
 df3.hist
 
+datos_poblacion.groupby('city')['population']
+datos_poblacion.head
 
+plt.title('Distribucion poblacion total por ciudades')
 
+lmplot('population_proper', 'population', data=datos_poblacion, fit_reg=False)
 
+plt.title('Distribucion poblacion ')
+distplot(datos_poblacion.population_proper, rug=True, hist=False)
 
+data.groupby('admin')['population_proper'].sum().plot(kind='barh',legend='Reverse')
+plt.xlabel('Suma Rating ')
+plt.ylabel('Genero de  Movies ')
 
+filename2='C:/Users/DELL/Documents/R/ter/IMDB-Movie-Data.csv'
 
-
-
-
-
-
-
-
-
-
+datos=pd.read_csv(filename2)
+df=pd.DataFrame(datos)
+plt.title('Ranting MAximo de movies x Genero')
+df.groupby('Genre')['Rating'].sum().plot(kind='barh',legend='Reverse')
+plt.xlabel('Suma Rating ')
+plt.ylabel('Genero de  Movies ')
+lista1=df.columns('Rating').max()
+plt.title('Votos')
+plt.plot(lista1) 
+plt.xlabel('Suma Rating ')
+plt.ylabel('Genero de  Movies ')
 
 
 

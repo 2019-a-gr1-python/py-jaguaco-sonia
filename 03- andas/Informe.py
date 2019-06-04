@@ -20,9 +20,6 @@ path = 'C:/Users/DELL/Documents/R/trabajo.json'
 
 
 
-llaves = ['admin','city']
-
-
 
 with open(path) as texto_json:
     contenido_json=json.load(texto_json)

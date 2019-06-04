@@ -11,7 +11,9 @@ import unicodedata
 
 import pandas as pd
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud, STOPWORDS
+from wordcloud import WordCloud
+from wordcloud import STOPWORDS
+
 from scipy.misc import imread
 
 
