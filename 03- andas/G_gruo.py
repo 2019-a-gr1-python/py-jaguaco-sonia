@@ -12,6 +12,7 @@ import numpy as np
 import math
 path_guardado = 'C:/Users/DELL/Documents/GitHub/py-jaguaco-sonia/03- andas/data/csv/artwork_data.pickle'
 
+
 df = pd.read_pickle(path_guardado)
 
 seccion_df = df.iloc[49980:50019,:].copy()
@@ -65,4 +66,23 @@ def transformar_df(df):
     return nuevo_df_transformado
 
 seccion_df_t = transformar_df(seccion_df)
-© 2019 GitHub, Inc.
+
+# agrupar el dataframe en pickel
+df_agrupado_titulo = df.groupby('title')
+print(df_agrupado_titulo.size())
+
+df_agrupado_anio = df.groupby('year')
+print(df_agrupado_anio.size())
+anios = df_agrupado_anio.size()
+
+print(type(df_agrupado_titulo.size()))
+serie_titulos = df_agrupado_titulo.size().sort_values(ascending = False)
+
+#Filtrar datos
+df_filtrado = df.filter(items = ["artist","title"])
+# Filtrado con una funcion lambda
+condicion = lambda x: len(x.index) > 5
+
+df_titulos_dup = df_agrupado_titulo.filter(condicion)
+
+resultado = df_titulos_dup.sort_values('title',inplace = True)
