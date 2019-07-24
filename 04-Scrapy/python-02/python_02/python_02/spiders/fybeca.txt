@@ -1,0 +1,40 @@
+<div class="product-tile-inner"><a href="/FybecaWeb/pages/detail.jsf?itemId=226684&amp;itemName=TOTAL+MAGNESIANO+STRESS+7+MG+" class="name" style="">TOTAL MAGNESIANO STRESS 7 MG </a>
+	
+										<div class="detail">
+											<div class="side">
+												<div class="price-member">
+
+													<div data-bind="text:'$' + (52.08).formatMoney(2, '.', ',')"></div>
+													<div class="price-type">
+														<img src="../resources/themes/default/images/logo_vitalcard.png" alt="Vitalcard">
+													</div>
+												</div>
+												<div class="price" data-bind="text:'$' + (56.40).formatMoney(2, '.', ',')">
+
+													<div class="price-type">Normal</div>
+												</div>
+
+												<a href="#" class="btn btn-primary " data-action="buy" data-toggle="popover" data-placement="bottom">Comprar</a>
+
+
+
+
+												<!--  &lt;a href="#"
+													class='btn btn-primary hide'
+													data-action="contact-us" data-toggle="popover"
+													data-placement="bottom"&gt;Solicitar&lt;/a&gt;-->
+
+											</div>
+
+											<a href="#" class="image" data-action="openQuickView" onmouseover="$('#itmImg226684').css('display', '')" onmouseout="$('#itmImg226684').css('display', 'none')">
+
+													<img id="gImg" src="../../images/thumbnail/226684.jpg" class="productImage" onmouseout="$('#itmImg226684').css('display', 'none')" onmouseover="$('#itmImg226684').css('display', '')" onerror="changeImgOnError(this)"> <img id="itmImg226684" src="../resources/themes/default/images/quick-view.png" class="productImage" style="opacity: 0.7; width: 90px; display: none; position: absolute; left: 20px; top: 70px;" onerror="changeImgOnError(this)">
+
+											</a>
+										</div>
+
+										<div>
+
+
+										</div>
+									</div>
